@@ -1,0 +1,58 @@
+swagger: "2.0"
+info:
+  title: Task1
+  description: API Walk through.
+  version: 1.0.0
+
+host: task1.apigateway.assignment3-418100.cloud.goog
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /add:
+    post:
+      operationId: addCloudFunction
+      summary: add Cloud Function.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-assignment3-418100.cloudfunctions.net/add
+  /sub:
+    post:
+      operationId: subCloudFunction
+      summary: sub Cloud Function.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-assignment3-418100.cloudfunctions.net/sub
+  /div:
+    post:
+      operationId: divCloudFunction
+      summary: div Cloud Function.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-assignment3-418100.cloudfunctions.net/div
+  /mul:
+    post:
+      operationId: mulCloudFunction
+      summary: mul Cloud Function.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://us-central1-assignment3-418100.cloudfunctions.net/mul
+        
